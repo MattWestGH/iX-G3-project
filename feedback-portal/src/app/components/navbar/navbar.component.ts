@@ -9,7 +9,7 @@ import { GridDisplayComponent } from '../Grid/grid-display/grid-display.componen
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(  private router: Router) { }
+  constructor(private router: Router) { }
   ngOnInit(): void {
   }
  homeClicked(){

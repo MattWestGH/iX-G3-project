@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
 import { GridDisplayComponent } from './components/Grid/grid-display/grid-display.component';
 
+
 const routes: Routes = [{
   path: "Home",
   component: GridDisplayComponent
