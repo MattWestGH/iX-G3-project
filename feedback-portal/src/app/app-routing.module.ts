@@ -5,7 +5,12 @@ import { ContactFormComponent } from './components/contact/contact-form/contact-
 import { GridDisplayComponent } from './components/Grid/grid-display/grid-display.component';
 
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
+    path: "",
+    component: GridDisplayComponent
+  },
+  {
   path: "Home",
   component: GridDisplayComponent
 },
