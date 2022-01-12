@@ -6,6 +6,10 @@ import { GridDisplayComponent } from './components/Grid/grid-display/grid-displa
 
 
 const routes: Routes = [{
+  path: "",
+  component: GridDisplayComponent
+},
+  {
   path: "Home",
   component: GridDisplayComponent
 },

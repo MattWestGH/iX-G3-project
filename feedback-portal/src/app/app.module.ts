@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GridDisplayComponent } from './components/Grid/grid-display/grid-display.component';
 import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
-import { AboutComponent } from './components/about/about.component';
 import { ModalComponent } from './components/modal/modal/modal.component';
 import { ModalCardComponent } from './components/modal-card/modal-card/modal-card.component';
+import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ModalCardComponent } from './components/modal-card/modal-card/modal-car
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
