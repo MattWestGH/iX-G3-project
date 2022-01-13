@@ -1,12 +1,14 @@
 <div class="container-sm my-5">
   <form>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address:</label>
+      <label for="email" class="form-label">Email address:</label>
       <input
         type="email"
         class="form-control"
-        id="exampleInputEmail1"
+        id="email"
         aria-describedby="emailHelp"
+        [(ngModel)]="contactForm.email"
+        [ngModelOptions]="{ standalone: true }"
       />
       <div id="emailHelp" class="form-text">
         We'll never share your email with anyone else.
@@ -15,17 +17,77 @@
 
     <div class="mb-3">
       <label for="Name" class="form-label">Name:</label>
-      <input type="text" class="form-control" id="UserName" />
+      <input
+        type="text"
+        class="form-control"
+        id="UserName"
+        [(ngModel)]="contactForm.name"
+        [ngModelOptions]="{ standalone: true }"
+      />
     </div>
 
     <div class="mb-3">
       <label for="Surname" class="form-label">Surname:</label>
-      <input type="text" class="form-control" id="UserSurname" />
+      <input
+        type="text"
+        class="form-control"
+        id="UserSurname"
+        [(ngModel)]="contactForm.surname"
+        [ngModelOptions]="{ standalone: true }"
+      />
     </div>
     <div class="mb-3">
       <label for="phoneNumber" class="form-label">Phone Number:</label>
-      <input type="text" class="form-control" id="phoneNumber" />
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        [(ngModel)]="contactForm.number"
+        [ngModelOptions]="{ standalone: true }"
+      />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      (click)="submitContact()"
+    >
+      Submit
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thank you</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            We Will Get back to you as soon as possible.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
 </div>

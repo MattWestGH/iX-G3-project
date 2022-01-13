@@ -8,6 +8,8 @@ import { ContactFormComponent } from './components/contact/contact-form/contact-
 import { AboutComponent } from './components/about/about.component';
 import { ModalComponent } from './components/modal/modal/modal.component';
 import { ModalCardComponent } from './components/modal-card/modal-card/modal-card.component';
+import { FormsModule } from '@angular/forms';
+import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { ModalCardComponent } from './components/modal-card/modal-card/modal-car
     AboutComponent,
     ModalComponent,
     ModalCardComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
