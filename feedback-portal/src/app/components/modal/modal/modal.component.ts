@@ -12,13 +12,7 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Feedback(){
-    this.router.navigate(["Feedback"])
-  }
-  Suggestion(){
-    this.router.navigate(["Suggestion"])
-  }
-  Comment(){
-    this.router.navigate(["Comment"])
+  thankPage(){
+    this.router.navigate(["thankYou"])
   }
 }
