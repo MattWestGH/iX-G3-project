@@ -6,11 +6,10 @@ import { GridDisplayComponent } from './components/Grid/grid-display/grid-displa
 import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.component';
 
 
-const routes: Routes = [
-  {
-    path: "",
-    component: GridDisplayComponent
-  },
+const routes: Routes = [{
+  path: "",
+  component: GridDisplayComponent
+},
   {
   path: "Home",
   component: GridDisplayComponent
