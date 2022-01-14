@@ -10,6 +10,7 @@ import { ModalComponent } from './components/modal/modal/modal.component';
 import { ModalCardComponent } from './components/modal-card/modal-card/modal-card.component';
 import { FormsModule } from '@angular/forms';
 import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

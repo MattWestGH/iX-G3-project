@@ -1,5 +1,8 @@
-export class Feedback{
+export default class Feedback{
+    id?:string;
     email?: string;
-    Fname?: string;
-    feedback?: string;
+    name?: string;
+    message?: string;
+    createdAt?:string;
+    updatedAt?: string;
 }
