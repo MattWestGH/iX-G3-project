@@ -42,8 +42,11 @@ export class ModalCardComponent implements OnInit {
   }
   async deleteFeedback(feedback: Feedback){
     await this.postService.deletepostDB(feedback);
+    this.feedbackLi = this.feedbackLi.filter((x) => x.id != feedback.id)
+
   }
   async updateFeedback(){
-    await this.postService.updatepostDB();
+    await this.postService.updatepostDB(this.feedback);
+    this.feedback = new Feedback()
   }
 }

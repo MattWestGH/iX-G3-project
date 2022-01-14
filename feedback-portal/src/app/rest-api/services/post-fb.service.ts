@@ -25,10 +25,15 @@ export class PostFBService {
   getPost(){
     return this.http.get(this.url + "/feedback/posts").toPromise();
   }
-  updatepostDB(){
-
+  updatepostDB(post : Feedback){
+    this.http.put(this.url + "/feedback/" + post.id,{
+      email: post.email,
+      name: post.name,
+      message: post.message,
+    }).toPromise(); 
   }
   deletepostDB(post: Feedback){
-    return this.http.delete(this.url + '/feedback/' + post.id);
+    const deleteUrl = this.url + "/feedback/" + post.id;
+    return this.http.delete(deleteUrl).toPromise();
   }
 }
