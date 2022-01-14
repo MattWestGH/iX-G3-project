@@ -9,6 +9,7 @@ import { ModalComponent } from './components/modal/modal/modal.component';
 import { ModalCardComponent } from './components/modal-card/modal-card/modal-card.component';
 import { FormsModule } from '@angular/forms';
 import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.component';
+import {HttpClientModule} from '@angular/common/http'
 import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
@@ -27,6 +28,8 @@ import { AboutComponent } from './components/about/about.component';
     AppRoutingModule,
 
     FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
