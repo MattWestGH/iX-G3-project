@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from 'src/app/model/contact';
+import  Contact  from 'src/app/model/contact';
+import { PostContactService } from 'src/app/rest-api/services/post-contact.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,13 +10,13 @@ import { Contact } from 'src/app/model/contact';
 export class ContactFormComponent implements OnInit {
 
   contactForm: Contact = new Contact;
-  constructor() { }
+  constructor(private postContact: PostContactService) { }
 
   ngOnInit(): void {
   }
-  submitContact(){
-    console.log(this.contactForm)
-    this.contactForm = new Contact;
+  async submitContact(){
+    await this.postContact.addContactDB(this.contactForm);
+    this.contactForm = new Contact();
   }
   
 }

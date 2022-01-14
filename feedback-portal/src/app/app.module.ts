@@ -9,7 +9,11 @@ import { ModalComponent } from './components/modal/modal/modal.component';
 import { ModalCardComponent } from './components/modal-card/modal-card/modal-card.component';
 import { FormsModule } from '@angular/forms';
 import { ThankYouComponent } from './components/thank-page/thank-you/thank-you.component';
+<<<<<<< HEAD
 import { AboutComponent } from './components/about/about.component';
+=======
+import {HttpClientModule} from '@angular/common/http'
+>>>>>>> 4d717c1b6bcb6cad9e59f6a3ac2cb347d250035c
 
 @NgModule({
   declarations: [
@@ -25,8 +29,13 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
 
     FormsModule,
+=======
+    FormsModule,
+    HttpClientModule
+>>>>>>> 4d717c1b6bcb6cad9e59f6a3ac2cb347d250035c
   ],
   providers: [],
   bootstrap: [AppComponent]
