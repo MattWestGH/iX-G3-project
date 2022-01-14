@@ -6,6 +6,7 @@
         type="email"
         class="form-control"
         id="email"
+        placeholder="@email"
         aria-describedby="emailHelp"
         [(ngModel)]="contactForm.email"
         [ngModelOptions]="{ standalone: true }"
@@ -16,7 +17,9 @@
       </div>
     </div>
 
-    <div class="mb-3">
+    <form>
+      <div class="row">
+    <div class="col mb-3">
       <label for="Name" class="form-label">Name:</label>
       <input
         type="text"
@@ -27,7 +30,7 @@
       />
     </div>
 
-    <div class="mb-3">
+    <div class="col mb-3">
       <label for="Surname" class="form-label">Surname:</label>
       <input
         type="text"
@@ -37,6 +40,8 @@
         [ngModelOptions]="{ standalone: true }"
       />
     </div>
+    </div>
+  </form>
 
     <div class="mb-3">
       <label for="phoneNumber" class="form-label">Phone Number:</label>
@@ -44,6 +49,7 @@
         type="text"
         class="form-control"
         id="phoneNumber"
+        placeholder="+263 123 456 78"
         [(ngModel)]="contactForm.number"
         [ngModelOptions]="{ standalone: true }"
       />
@@ -91,6 +97,5 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
